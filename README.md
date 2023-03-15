@@ -40,7 +40,7 @@ App runs on **http://localhost:8080/** as default
 npm run build
 ```
 
-**Start local production server with serve:**
+**Start local production server:**
 ```
 npm start
 ```
@@ -50,6 +50,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+**Start local test server:**
 ```
 npm test
 ```
@@ -57,6 +58,7 @@ npm test
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+**Build app:**
 ```
 npm run build
 ```
