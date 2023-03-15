@@ -1,25 +1,16 @@
-import demo_icon from './assets/icons/weather/demo.png';
 import './assets/App.css';
+import MainPane from './components/MainPane';
+
+// const api = {
+// 	key: 'cbfe29932a8bb4e7f20315babd8f135b',
+// 	base: 'http://api.openweathermap.org/data/2.5/',
+// 	current: 'weather?q=London&units=metric&APPID=', // London current weather data
+// };
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        {/* Main pane container */}
-        <div className="container">
-          {/* Current weather condition icon */}
-          <img src={demo_icon} className="demo-icon" alt="partly cloudy" />
-          {/* Weather info */}
-          <h1>12°</h1>
-          <h4>London</h4>
-          <h3>Partly Cloudy</h3>
-          <h4>Sunday, 19 March</h4>
-        </div>
-      </header>
-      {/* Forecast pane container */}
-      <div className="container">
-
-      </div>
+      <MainPane />
     </div>
   );
 }

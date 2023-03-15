@@ -1,27 +1,44 @@
 import demo_icon from '../../assets/icons/weather/demo.png';
 import './style.css';
+import React, { useState, useEffect } from 'react';
 
 function MainPane() {
+	const [weatherData, setWeatherData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch('http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=cbfe29932a8bb4e7f20315babd8f135b');
+      const data = await response.json();
+      setWeatherData({
+        desc: data.weather[0].description,
+        loc: data.name,
+        temp: Math.round(data.main.temp)
+      });
+    }
+    fetchData();
+  }, []);
+
 	return (
 		<>
-			<header className="App-header">
 			{/* Main pane container */}
-			<div className="container">
-				{/* Current weather condition icon */}
-				<img src={demo_icon} className="demo-icon" alt="partly cloudy" />
+			<div className="container-wrapper">
+				<div className="container">
+					{/* Current weather condition icon */}
+					<img src={demo_icon} className="demo-icon" alt="partly cloudy" />
 
-				{/* Weather info */}
-				<h1>12</h1>
-				<h4>London</h4>
-				<h3>Partly Cloudy</h3>
-				<h4>Sunday, 19 March</h4>
+					{/* Weather info */}
+					<h1>{weatherData.temp}</h1>
+					<h3 className='inter-reg'>{weatherData.loc}</h3>
+					<h2>{weatherData.desc}</h2>
+					<h3 className='inter-reg'>Sunday, 19 March</h3>
+				</div>
 			</div>
-		</header>
-		{/* Forecast pane container */}
-		<div className="container">
-
-		</div>
-	</>
+			<hr/>
+			{/* Forecast pane container */}
+			<div className="container">
+				{/* Forecast pane */}
+			</div>
+		</>
 	)
 }
 

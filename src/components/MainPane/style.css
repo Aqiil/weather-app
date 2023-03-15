@@ -1,18 +1,32 @@
+.container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #133C55;
+  color: white;
+  text-align: center;
+  max-width: 23.438rem;
+  max-height: 38.438rem;
+}
+
 .container {
-  height: 100%;
-  background-color: blue;
-  box-sizing: content-box;
-  margin: 0 auto;
-  padding: 0rem;
+  /* height: 100%; */
+  padding: 0.25rem;
+  border-bottom: 50px;
 }
 
 .demo-icon {
-    width: 50%;
-    height: 50%
+  width: 70%;
+  height: 70%
 }
 
 /* Add degrees sign after main temperature text */
 h1:after {
-    content: "°";
-    font-size: 0.5em;
-  }
+  content: "°";
+  font-size: 0.5em;
+}
+
+/* Solid border */
+hr {
+  border-top: 1px solid #FFFFFF;
+}
