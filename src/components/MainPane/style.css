@@ -1,0 +1,18 @@
+.container {
+  height: 100%;
+  background-color: blue;
+  box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0rem;
+}
+
+.demo-icon {
+    width: 50%;
+    height: 50%
+}
+
+/* Add degrees sign after main temperature text */
+h1:after {
+    content: "°";
+    font-size: 0.5em;
+  }

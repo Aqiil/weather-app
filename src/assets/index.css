@@ -1,5 +1,5 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,10 +10,47 @@ body {
   max-height: 50.75rem;
 
   /* Center the app */
-  margin: 0 auto;
+  margin: auto auto;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Format all text using rem measurments */
+h1 {
+  font-size: 8rem; /* 128px */
+  font-weight: 600;
+  margin: 0.25rem;
+}
+
+h2 {
+  font-size: 2.25rem; /* 36px */
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1rem; /* 16px */
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 600;
+}
+
+p {
+  font-size: 0.938rem; /* 15px */
+  font-weight: 400;
 }
