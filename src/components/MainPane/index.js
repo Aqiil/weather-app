@@ -3,6 +3,10 @@ import './style.css';
 import React, { useState, useEffect } from 'react';
 
 function MainPane() {
+	const today = new Date();
+  const options = { weekday: 'long', day: 'numeric', month: 'long' };
+  const formattedDate = today.toLocaleDateString('en-US', options);
+
 	const [weatherData, setWeatherData] = useState(null);
 
   useEffect(() => {
@@ -33,7 +37,7 @@ function MainPane() {
 						<h1>{weatherData.temp}</h1>
 						<h3 className='inter-reg'>{weatherData.loc}</h3>
 						<h2>{weatherData.desc}</h2>
-						<h3 className='inter-reg'>Sunday, 19 March</h3>
+						<h3 className='inter-reg'>{formattedDate}</h3>
 						</>
 					) : (
 					  <p>Loading weather data...</p>
