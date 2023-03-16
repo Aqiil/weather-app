@@ -1,5 +1,6 @@
 import demo_icon from '../../assets/icons/weather/demo.png';
 import HourlyForecast from '../HourlyForecast';
+import FiveDayForecast from '../FiveDayForecast';
 
 import './style.css';
 import React, { useState, useEffect } from 'react';
@@ -52,6 +53,7 @@ function MainPane() {
 				{/* Forecast pane */}
 			</div>
 			<HourlyForecast />
+			<FiveDayForecast />
 		</>
 	)
 }
