@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <div className="iPhone-container">
         <MainPane />
-        <MainPane />
+        {/* <MainPane /> */}
       </div>
     </div>
   );
