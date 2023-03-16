@@ -11,9 +11,11 @@ import MainPane from './components/MainPane';
 
 function App() {
   return (
-    <div className="iPhone-container">
-      <MainPane />
-      <MainPane />
+    <div className="App">
+      <div className="iPhone-container">
+        <MainPane />
+        <MainPane />
+      </div>
     </div>
   );
 }

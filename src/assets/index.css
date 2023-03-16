@@ -1,5 +1,10 @@
 body {
   font-family: 'Inter', sans-serif;
+  background-color: grey;
   
-  background-color: grey
+  /* Center app */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
