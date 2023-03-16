@@ -26,11 +26,18 @@ function MainPane() {
 					{/* Current weather condition icon */}
 					<img src={demo_icon} className="demo-icon" alt="partly cloudy" />
 
-					{/* Weather info */}
-					<h1>{weatherData.temp}</h1>
-					<h3 className='inter-reg'>{weatherData.loc}</h3>
-					<h2>{weatherData.desc}</h2>
-					<h3 className='inter-reg'>Sunday, 19 March</h3>
+					{/* Conditional check to verify weatherData is not null */}
+					{weatherData ? (
+						<>
+						{/* Weather info */}
+						<h1>{weatherData.temp}</h1>
+						<h3 className='inter-reg'>{weatherData.loc}</h3>
+						<h2>{weatherData.desc}</h2>
+						<h3 className='inter-reg'>Sunday, 19 March</h3>
+						</>
+					) : (
+					  <p>Loading weather data...</p>
+					)}
 				</div>
 			</div>
 			<hr/>
