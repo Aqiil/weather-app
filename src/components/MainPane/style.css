@@ -1,7 +1,9 @@
 .container-wrapper {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  width: 23.438rem; /* 375px */
+  height: 36.375rem; /* 615px */
   background-color: #133C55;
   color: white;
   text-align: center;
@@ -9,16 +11,13 @@
 }
 
 .main-container {
-  /* height: 100%; */
   padding: 0.25rem;
   border-bottom: 50px;
 }
 
 .sub-container {
-  /* height: 100%; */
   padding: 0.25rem;
   border-bottom: 50px;
-  background-color: green;
 }
 
 .demo-icon {
