@@ -10,10 +10,17 @@
   border-radius: 0 0 50px 50px;
 }
 
-.container {
+.main-container {
   /* height: 100%; */
   padding: 0.25rem;
   border-bottom: 50px;
+}
+
+.sub-container {
+  /* height: 100%; */
+  padding: 0.25rem;
+  border-bottom: 50px;
+  background-color: green;
 }
 
 .demo-icon {

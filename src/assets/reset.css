@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+
+  /* Format all text using rem measurments */
+h1 {
+  font-size: 8rem; /* 128px */
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.25rem; /* 36px */
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1rem; /* 16px */
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 600;
+}
+
+p {
+  font-size: 0.938rem; /* 15px */
+  font-weight: 400;
+}

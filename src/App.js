@@ -1,3 +1,5 @@
+import './assets/reset.css';
+import './assets/iPhone.css';
 import './assets/App.css';
 import MainPane from './components/MainPane';
 
@@ -9,7 +11,8 @@ import MainPane from './components/MainPane';
 
 function App() {
   return (
-    <div className="App">
+    <div className="iPhone-container">
+      <MainPane />
       <MainPane />
     </div>
   );

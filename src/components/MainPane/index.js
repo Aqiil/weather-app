@@ -29,7 +29,7 @@ function MainPane() {
 		<>
 			{/* Main pane container */}
 			<div className="container-wrapper">
-				<div className="container">
+				<div className="main-container">
 					{/* Current weather condition icon */}
 					<img src={demo_icon} className="demo-icon" alt="partly cloudy" />
 
@@ -46,11 +46,11 @@ function MainPane() {
 					  <p>Loading weather data...</p>
 					)}
 				</div>
-			</div>
-			<hr/>
-			{/* Forecast pane container */}
-			<div className="container">
-				{/* Forecast pane */}
+				{/* Forecast pane container */}
+				<div className="sub-container">
+				<hr/>
+					{/* Forecast pane */}
+				</div>
 			</div>
 			<HourlyForecast />
 			<FiveDayForecast />
