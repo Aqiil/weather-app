@@ -1,4 +1,6 @@
 import demo_icon from '../../assets/icons/weather/demo.png';
+import HourlyForecast from '../HourlyForecast';
+
 import './style.css';
 import React, { useState, useEffect } from 'react';
 
@@ -49,6 +51,7 @@ function MainPane() {
 			<div className="container">
 				{/* Forecast pane */}
 			</div>
+			<HourlyForecast />
 		</>
 	)
 }
