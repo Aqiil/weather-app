@@ -1,0 +1,21 @@
+.daily-rainfall-container {
+    display: flex;
+    align-items: center;
+}
+
+.daily-rainfall {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px; /* add margin-left property to create space */
+}
+
+.daily-rainfall {
+    display: flex;
+    align-items: baseline;
+    font-size: 1.5rem;
+}
+
+.daily-rainfall span {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
