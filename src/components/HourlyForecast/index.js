@@ -14,7 +14,7 @@ function HourlyForecast() {
     }, []);
   
     return (
-      <div className="hourly-forecast-container">
+      <div className="hourly-forecast-container-wrapper">
         {/* Display hourly forecast data */}
       </div>
     );

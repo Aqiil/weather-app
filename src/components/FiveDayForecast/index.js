@@ -14,7 +14,7 @@ function FiveDayForecast() {
     }, []);
   
     return (
-      <div className="five-day-forecast-container">
+      <div className="five-day-forecast-container-wrapper">
         {/* Display five-day forecast data */}
       </div>
     );

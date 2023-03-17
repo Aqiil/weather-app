@@ -16,3 +16,21 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.section {
+  margin-bottom: 0.938rem; /* 15px */
+}
+
+.MainPane-container {
+  height: 38.437rem; /* 615px */
+  margin-bottom: 0.938rem; /* 15px */
+}
+
+.HourlyForecast-container {
+  height: 9.625rem; /* 160px */
+  margin-bottom: 0.938rem; /* 15px */
+}
+
+.FiveDayForecast-container {
+  height: 36.25rem; /* 610px */
+}

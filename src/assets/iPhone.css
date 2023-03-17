@@ -1,8 +1,8 @@
 /* Set 375 by 812 mobile viewport */
 .iPhone-container {
-	width: 23.438rem;
-	height: 50.75rem;
-	overflow-y: scroll;
+	width: 23.438rem; /* 375px */
+	height: 50.75rem; /* 812px */
+	overflow-y: scroll; 
 	-webkit-overflow-scrolling: touch;
 	background-color: black;
 }

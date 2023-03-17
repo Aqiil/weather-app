@@ -1,7 +1,10 @@
 import './assets/reset.css';
 import './assets/iPhone.css';
 import './assets/App.css';
+
 import MainPane from './components/MainPane';
+import HourlyForecast from './components/HourlyForecast';
+import FiveDayForecast from './components/FiveDayForecast';
 
 // const api = {
 // 	key: 'cbfe29932a8bb4e7f20315babd8f135b',
@@ -13,8 +16,15 @@ function App() {
   return (
     <div className="App">
       <div className="iPhone-container">
-        <MainPane />
-        {/* <MainPane /> */}
+        <div className="section MainPane-container">
+          <MainPane />
+        </div>
+        <div className="section HourlyForecast-container">
+          <HourlyForecast />
+        </div>
+        <div className="FiveDayForecast-container">
+          <FiveDayForecast />
+        </div>
       </div>
     </div>
   );
