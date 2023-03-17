@@ -20,9 +20,11 @@
   border-bottom: 50px;
 }
 
-.demo-icon {
-  width: 70%;
-  height: 70%
+.weather-icon {
+  /* width: 70%;
+  height: 70% */
+  height: 14.375rem;
+  margin-top: 5.5rem; /* 88px */
 }
 
 /* Add degrees sign after main temperature text */
