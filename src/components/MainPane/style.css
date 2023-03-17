@@ -1,7 +1,7 @@
 .main-pane-container-wrapper {
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
+  flex-direction: column;
   width: 23.438rem; /* 375px */
   height: 43rem; /* 688px */
   background-color: #133C55;
@@ -15,15 +15,18 @@
   border-bottom: 50px;
 }
 
-.sub-container {
-  padding: 0.25rem;
-  border-bottom: 50px;
+.main-pane-sub-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 18px;
 }
 
 .weather-icon {
-  /* width: 70%;
-  height: 70% */
   height: 14.375rem;
+  min-height: 14.375rem;
   margin-top: 5.5rem; /* 88px */
 }
 
@@ -41,4 +44,6 @@ h1:after {
 /* Solid border */
 hr {
   border-top: 1px solid #FFFFFF;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }

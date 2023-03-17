@@ -1,0 +1,22 @@
+.daily-hl-container {
+    display: flex;
+    align-items: center;
+}
+
+.daily-hl-temps {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px; /* add margin-left property to create space */
+}
+
+.daily-hl-temp {
+    display: flex;
+    align-items: baseline;
+    font-size: 1.5rem;
+}
+
+.daily-hl-temp span {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+  
