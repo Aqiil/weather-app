@@ -46,8 +46,8 @@ function MainPane() {
 	return (
 		<>
 			{/* Main pane container */}
-			<div className="container-wrapper">
-				<div className="main-container">
+			<div className="main-pane-container-wrapper">
+				<div className="main-pane-container">
 					{/* Current weather condition icon */}
 					<img src={iconMap[weatherData?.desc]} className="weather-icon" alt="weather condition" />
 

@@ -1,4 +1,4 @@
-.container-wrapper {
+.main-pane-container-wrapper {
   /* display: flex;
   justify-content: center;
   align-items: center; */
@@ -10,7 +10,7 @@
   border-radius: 0 0 50px 50px;
 }
 
-.main-container {
+.main-pane-container {
   padding: 0.25rem;
   border-bottom: 50px;
 }
