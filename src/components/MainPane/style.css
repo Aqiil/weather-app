@@ -2,11 +2,10 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 23.438rem; /* 375px */
-  height: 43rem; /* 688px */
-  background-color: #133C55;
-  color: white;
   text-align: center;
+  width: 23.438rem; /* 375px */
+  height: 40.25rem; /* 688px */
+  background-color: #133C55;
   border-radius: 0 0 50px 50px;
 }
 
@@ -21,13 +20,12 @@
   justify-content: center;
   align-items: center;
   gap: 50px;
-  margin-bottom: 18px;
 }
 
 .weather-icon {
-  height: 14.375rem;
-  min-height: 14.375rem;
-  margin-top: 5.5rem; /* 88px */
+  height: 13rem;
+  min-height: 13rem;
+  margin-top: 3rem;
 }
 
 /* Add degrees sign after main temperature text */
@@ -42,7 +40,7 @@ h1:after {
 }
 
 /* Solid border */
-hr {
+.main-pane-hr {
   border-top: 1px solid #FFFFFF;
   margin-top: 30px;
   margin-bottom: 20px;
