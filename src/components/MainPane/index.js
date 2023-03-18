@@ -69,7 +69,7 @@ function MainPane() {
 					)}
 				</div>
 				{/* Daily forecast pane container */}
-				<hr/>
+				<hr className='main-pane-hr'/>
 				<div className="main-pane-sub-container">
 					<DailyRainfall coverage='90' time='10:30' />
 					<DailyHL high={weatherData?.temp + 5} low={weatherData?.temp - 5} />

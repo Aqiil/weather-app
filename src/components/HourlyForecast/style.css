@@ -1,6 +1,25 @@
-.hourly-forecast-container-wrapper{
-    background-color: #133C55;
-    border-radius: 50px;
-    width: 23.438rem; /* 375px */
-    height: 9.625rem; /* 160px */
+.hourly-forecast-container-wrapper {
+	display: flex;
+  justify-content: center;
+  flex-direction: column;
+	text-align: center;
+	width: 23.438rem; /* 375px */
+	height: 9.625rem; /* 160px */
+	background-color: #133C55;
+	border-radius: 40px;
+}
+
+.severe-weather-warning-container {
+
+  padding: 10px;
+	margin-top: 9px;
+  margin-bottom: 6px;
+}
+
+.hourly-forecast-container {
+	min-height: 90px;
+}
+
+hr {
+  border-top: 1px solid #FFFFFF;
 }

@@ -16,13 +16,13 @@ function App() {
   return (
     <div className="App">
       <div className="iPhone-container">
-        <div className="section MainPane-container">
+        <div className="section">
           <MainPane />
         </div>
-        <div className="section HourlyForecast-container">
+        <div className="section">
           <HourlyForecast />
         </div>
-        <div className="FiveDayForecast-container">
+        <div className="">
           <FiveDayForecast />
         </div>
       </div>

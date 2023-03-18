@@ -1,6 +1,8 @@
 import './style.css';
 import React, { useState, useEffect } from 'react';
 
+// import FiveHourForecast from '../FiveHourForecast';
+
 function HourlyForecast() {
     const [hourlyData, setHourlyData] = useState(null);
   
@@ -15,7 +17,15 @@ function HourlyForecast() {
   
     return (
       <div className="hourly-forecast-container-wrapper">
-        {/* Display hourly forecast data */}
+        <div className="hourly-forecast-container">
+          <div className="severe-weather-warning-container">
+            <p>No severe weather warning</p>
+          </div>
+          <hr />
+          <div className="hourly-forecast-container">
+            {/* <FiveHourForecast /> */}
+          </div>
+        </div>
       </div>
     );
   }
