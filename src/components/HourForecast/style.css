@@ -1,0 +1,21 @@
+.hour-forecast-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 89px;
+    margin: 10px 0;
+  }
+  
+  .hour-forecast-container p {
+    margin: 0;
+    font-size: 0.9em;
+  }
+  
+  .hour-forecast-container img {
+    height: 35px;
+    min-height: 35px;
+    margin: 5px 0;
+  }
+  

@@ -4,16 +4,20 @@
   flex-direction: column;
 	text-align: center;
 	width: 23.438rem; /* 375px */
-	height: 9.375rem; /* 150px */
+	height: 11.25rem;
 	background-color: #133C55;
-	border-radius: 40px;
+	border-radius: 35px;
 }
 
 .severe-weather-warning-container {
+	margin-top: 5px;
+  margin-bottom: 15px;
+}
 
-  padding: 10px;
-	margin-top: 9px;
-  margin-bottom: 6px;
+.five-hour-forecast-container {
+	display: flex;
+  justify-content: space-between;
+  /* margin-top: 10px; */
 }
 
 .hourly-forecast-container {
