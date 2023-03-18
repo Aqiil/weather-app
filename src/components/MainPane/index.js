@@ -10,6 +10,7 @@ import thunderstorm from '../../assets/icons/weather/thunderstorm.png';
 
 import DailyHL from '../DailyHL';
 import DailyRainfall from '../DailyRainfall';
+import HourlyForecast from '../HourlyForecast';
 
 import './style.css';
 import React, { useState, useEffect } from 'react';
@@ -67,10 +68,9 @@ function MainPane() {
 					  <p>Loading weather data...</p>
 					)}
 				</div>
-				{/* Forecast pane container */}
+				{/* Daily forecast pane container */}
 				<hr/>
 				<div className="main-pane-sub-container">
-					{/* Forecast pane */}
 					<DailyRainfall coverage='90' time='10:30' />
 					<DailyHL high={weatherData?.temp + 5} low={weatherData?.temp - 5} />
 				</div>
