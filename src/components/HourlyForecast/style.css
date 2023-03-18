@@ -4,7 +4,7 @@
   flex-direction: column;
 	text-align: center;
 	width: 23.438rem; /* 375px */
-	height: 9.625rem; /* 160px */
+	height: 9.375rem; /* 150px */
 	background-color: #133C55;
 	border-radius: 40px;
 }
@@ -17,7 +17,7 @@
 }
 
 .hourly-forecast-container {
-	min-height: 90px;
+	min-height: 90px; /* Reserve space for HourlyForecast component */
 }
 
 hr {
