@@ -1,72 +1,67 @@
 # weather-app
-A react weather app for ECS522U GUI programming module
+This is a simple React weather app built as part of the ECS522U GUI Programming module. It allows users to search for the weather in a given location or across the world and displays the current temperature, weather conditions, and weather forecast for the near future.
 
 ## Set-Up Guide
-### Check latest versions node and npm are installed
+To set up the app on your local machine, follow the instructions below:
+
+1. Check that you have the latest version of Node.js and npm installed. You can do this by running the following commands in your terminal:
 ```
 node -v
 npm -v
 ```
-
-### Install Node and npm
-```
-sudo apt update
-sudo apt install nodejs
-sudo apt install npm
-```
-
-## Installation
-**Clone repository:**
+2. Clone the repository to your local machine using the following command:
 ```
 git clone --depth 1 https://github.com/Aqiil/weather-app.git weather-app
+```
+This will create a new directory called "weather-app" in your current working directory.
+
+3. Navigate into the "weather-app" directory:
+```
 cd weather-app
 ```
-When prompted for GitHub credentials, the password you input must be a personal access token that you generate at https://github.com/settings/tokens. Set any arbitrary name for your token and enure the 'repo - Full control of private repositories' permission is selected. Generate the token and paste it in the terminal when prompted for your GitHub password.
 
-**Install dependencies:**
+4. Install the project dependencies by running the following command:
 ```
 npm install
 ```
 
+5. Install React Slick by running the following command:
+```
+npm install react-slick
+```
+
 ## Development Workflow
-**Start a live-reload development server:**
+
+Once you've set up the app on your local machine, you can start a live-reload development server by running the following command:
 ```
 npm run dev
 ```
-App runs on **http://localhost:8080/** as default
 
-**Generate a production build in ./build:**
+This will start the development server and open the app in your default browser. Any changes you make to the code will be automatically reloaded in the browser.
+
+To generate a production build of the app, run the following command:
 ```
 npm run build
 ```
 
-**Start local production server:**
+This will create a production-ready build of the app in the build directory.
+
+To start a local production server and view the built app, run the following command:
 ```
 npm start
 ```
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This will start the local server and open the app in your default browser.
 
-**Start local test server:**
+To run the app's test suite, run the following command:
 ```
 npm test
 ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This will launch the test runner in interactive watch mode, which will automatically re-run the tests whenever you make changes to the code.
 
-**Build app:**
-```
-npm run build
-```
+## Further Information
+For more information about the React Slick library used in this app, you can refer to the official documentation: https://react-slick.neostack.com/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
