@@ -1,9 +1,8 @@
 import './assets/reset.css';
 import './assets/iPhone.css';
-import './assets/App.css';
 
-import WeatherOverviewPage from './components/pages/WeatherOverviewPage';
-import AdditionalWeatherInfoPage from './components/pages/AdditionalWeatherInfoPage';
+import WeatherOverviewPage from './pages/WeatherOverviewPage';
+import AdditionalWeatherInfoPage from './pages/AdditionalWeatherInfoPage';
 import { useState } from 'react';
 
 function App() {

@@ -60,9 +60,9 @@ function MainPane() {
 						<>
 						{/* Weather info */}
 						<h1>{weatherData.temp}</h1>
-						<h3 className='inter-reg'>{weatherData.loc}</h3>
+						<h3>{weatherData.loc}</h3>
 						<h2 className='capitalize'>{weatherData.desc}</h2>
-						<h3 className='inter-reg'>{formattedDate}</h3>
+						<h3>{formattedDate}</h3>
 						</>
 					) : (
 					  <p>Loading weather data...</p>

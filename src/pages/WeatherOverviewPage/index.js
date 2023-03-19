@@ -1,8 +1,8 @@
 import style from './style.css';
 
-import MainPane from '../../MainPane';
-import HourlyForecast from '../../HourlyForecast';
-import FiveDayForecast from '../../FiveDayForecast';
+import MainPane from '../../components/MainPane';
+import HourlyForecast from '../../components/HourlyForecast';
+import FiveDayForecast from '../../components/FiveDayForecast';
 
 function WeatherOverviewPage() {
   return (
