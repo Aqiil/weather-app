@@ -1,0 +1,43 @@
+.location-pane-container {
+  width: 340px;
+  height: 150px;
+  background-color: #133C55;
+  display: flex;
+  border-radius: 20px;
+}
+
+.location-pane-info {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.location-pane-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.location-pane-time-temp {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.location-pane-info h5 {
+  margin: 0;
+}
+
+.location-pane-info h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.location-pane-img img {
+  height: 125px;
+}

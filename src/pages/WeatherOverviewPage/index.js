@@ -1,5 +1,3 @@
-import style from './style.css';
-
 import MainPane from '../../components/MainPane';
 import HourlyForecast from '../../components/HourlyForecast';
 import FiveDayForecast from '../../components/FiveDayForecast';

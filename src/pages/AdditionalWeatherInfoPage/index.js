@@ -1,16 +1,18 @@
 import style from './style.css';
 
-import YourLocations from '../../components/YourLocations';
-import AroundTheWorld from '../../components/AroundTheWorld';
+import LocationCaroussel from '../../components/LocationCaroussel';
+import GlobalLocationPanes from '../../components/GlobalLocationPanes';
 
 function AdditionalWeatherInfoPage() {
   return (
     <>
-      <div className="section">
-        <YourLocations />
-      </div>
-      <div>
-        <AroundTheWorld />
+      <div className="additional-weather-info-page-container">
+        <div className="section">
+          <LocationCaroussel />
+        </div>
+        <div>
+          <GlobalLocationPanes />
+        </div>
       </div>
     </>
   );

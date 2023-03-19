@@ -9,13 +9,16 @@ function App() {
   const [isAdditionalWeatherInfoVisible, setIsAdditionalWeatherInfoVisible] = useState(false);
 
   const toggleAdditionalWeatherInfo = () => {
-    setIsAdditionalWeatherInfoVisible(!isAdditionalWeatherInfoVisible);
+    if (!isAdditionalWeatherInfoVisible) {
+      setIsAdditionalWeatherInfoVisible(true);
+    }
   };
 
   return (
     <div className="App">
       <div className="iPhone-container" onClick={toggleAdditionalWeatherInfo}>
-        {isAdditionalWeatherInfoVisible ? <AdditionalWeatherInfoPage /> : <WeatherOverviewPage />}
+        {isAdditionalWeatherInfoVisible && <AdditionalWeatherInfoPage />}
+        {!isAdditionalWeatherInfoVisible && <WeatherOverviewPage />}
       </div>
     </div>
   );
