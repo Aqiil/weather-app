@@ -1,6 +1,12 @@
 .daily-hl-container {
-    display: flex;
     align-items: center;
+    display: flex;
+}
+
+.daily-hl-temp {
+    align-items: baseline;
+    display: flex;
+    font-size: 1.5rem;
 }
 
 .daily-hl-temps {
@@ -9,14 +15,7 @@
     margin-left: 8px; /* add margin-left property to create space */
 }
 
-.daily-hl-temp {
-    display: flex;
-    align-items: baseline;
-    font-size: 1.5rem;
-}
-
-.daily-hl-temp span {
-    margin-right: 0.5rem;
+.daily-hl-temp span {    
     font-size: 1.2rem;
+    margin-right: 0.5rem;
 }
-  

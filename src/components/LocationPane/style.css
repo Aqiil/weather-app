@@ -1,32 +1,32 @@
 .location-pane-container {
-  width: 340px;
-  height: 150px;
   background-color: #133C55;
-  display: flex;
   border-radius: 20px;
+  display: flex;
+  height: 150px;
+  width: 340px;
 }
 
 .location-pane-info {
-  flex: 1;
-  padding: 10px;
+  color: white;
   display: flex;
   flex-direction: column;
+  flex: 1;
   justify-content: center;
-  color: white;
+  padding: 10px;
 }
 
 .location-pane-img {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 10px;
 }
 
 .location-pane-time-temp {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
   margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .location-pane-info h5 {
@@ -34,8 +34,8 @@
 }
 
 .location-pane-info h3 {
-  margin-top: 10px;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .location-pane-img img {

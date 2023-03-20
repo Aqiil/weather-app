@@ -5,12 +5,12 @@
 }
 
 .carousel-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
   background-color: #D9D9D9;
-  margin: 0 10px;
+  border-radius: 50%;
   cursor: pointer;
+  height: 10px;
+  margin: 0 10px;
+  width: 10px;
 }
 
 .carousel-dot.active {
@@ -25,7 +25,3 @@
 .slick-dots li button:before {
   color: transparent !important; /* hide default dots */
 }
-
-
-
-

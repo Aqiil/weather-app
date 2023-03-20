@@ -1,21 +1,17 @@
 .daily-rainfall-container {
-    display: flex;
     align-items: center;
+    display: flex;
 }
 
 .daily-rainfall {
+    align-items: baseline;
     display: flex;
     flex-direction: column;
-    margin-left: 5px; /* add margin-left property to create space */
-}
-
-.daily-rainfall {
-    display: flex;
-    align-items: baseline;
     font-size: 1.5rem;
+    margin-left: 5px; /* Add space between icon and text */
 }
 
-.daily-rainfall span {
-    margin-right: 0.5rem;
+.daily-rainfall span { 
     font-size: 1.2rem;
+    margin-right: 0.5rem;
 }

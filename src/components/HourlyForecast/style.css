@@ -1,12 +1,12 @@
 .hourly-forecast-container-wrapper {
-	display: flex;
-  justify-content: center;
-  flex-direction: column;
-	text-align: center;
-	width: 23.438rem; /* 375px */
-	height: 11.25rem;
 	background-color: #133C55;
 	border-radius: 35px;
+	display: flex;
+	height: 11.25rem;
+	text-align: center;
+	width: 23.438rem; /* 375px */
+  flex-direction: column;
+  justify-content: center;
 }
 
 .severe-weather-warning-container {
@@ -17,7 +17,6 @@
 .five-hour-forecast-container {
 	display: flex;
   justify-content: space-between;
-  /* margin-top: 10px; */
 }
 
 .hourly-forecast-container {

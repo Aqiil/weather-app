@@ -1,21 +1,20 @@
 .hour-forecast-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 62px;
-    height: 89px;
-    margin: 10px 0;
-  }
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 89px;
+  justify-content: center;
+  margin: 10px 0;
+  width: 62px;
+}
   
-  .hour-forecast-container p {
-    margin: 0;
-    font-size: 0.9em;
-  }
-  
-  .hour-forecast-container img {
-    height: 35px;
-    min-height: 35px;
-    margin: 5px 0;
-  }
-  
+.hour-forecast-container p {
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.hour-forecast-container img {
+  height: 35px;
+  margin: 5px 0;
+  min-height: 35px;
+}
