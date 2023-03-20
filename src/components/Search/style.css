@@ -1,0 +1,13 @@
+.search-icon {
+  position: fixed;
+  margin-bottom: -35px;
+  margin-right: 60px;
+  right: 0px;
+}
+
+input {
+  outline: none;
+  color: black;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}

@@ -1,12 +1,9 @@
-import broken_clouds from '../../assets/icons/weather/broken_clouds.png';
-import clear_sky from '../../assets/icons/weather/clear_sky.png';
-import few_clouds from '../../assets/icons/weather/few_clouds.png';
-import mist from '../../assets/icons/weather/mist.png';
-import rain from '../../assets/icons/weather/rain.png';
-import scattered_clouds from '../../assets/icons/weather/scattered_clouds.png';
-import shower_rain from '../../assets/icons/weather/shower_rain.png';
-import snow from '../../assets/icons/weather/snow.png';
 import thunderstorm from '../../assets/icons/weather/thunderstorm.png';
+import drizzle from '../../assets/icons/weather/shower_rain.png';
+import rain from '../../assets/icons/weather/rain.png';
+import snow from '../../assets/icons/weather/snow.png';
+import clear from '../../assets/icons/weather/clear_sky.png';
+import clouds from '../../assets/icons/weather/broken_clouds.png';
 
 import DailyHL from '../DailyHL';
 import DailyRainfall from '../DailyRainfall';
@@ -22,16 +19,13 @@ function MainPane() {
 
 	const [weatherData, setWeatherData] = useState(null);
 
-	const iconMap = {
-    'clear sky': clear_sky,
-    'few clouds': few_clouds,
-    'scattered clouds': scattered_clouds,
-    'broken clouds': broken_clouds,
-    'shower rain': shower_rain,
-    'rain': rain,
-    'thunderstorm': thunderstorm,
-    'snow': snow,
-    'mist': mist
+	const iconMap = {    
+    'Thunderstorm': thunderstorm,
+    'Drizzle': drizzle,
+    'Rain': rain,
+    'Snow': snow,
+    'Clear': clear,
+    'Clouds': clouds,
   };
 
   useEffect(() => {
@@ -39,7 +33,7 @@ function MainPane() {
       const response = await fetch('http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=cbfe29932a8bb4e7f20315babd8f135b');
       const data = await response.json();
       setWeatherData({
-        desc: data.weather[0].description,
+        desc: data.weather[0].main,
         loc: data.name,
         temp: Math.round(data.main.temp)
       });
@@ -60,9 +54,9 @@ function MainPane() {
 						<>
 						{/* Weather info */}
 						<h1>{weatherData.temp}</h1>
-						<h3 className='inter-reg'>{weatherData.loc}</h3>
+						<h3>{weatherData.loc}</h3>
 						<h2 className='capitalize'>{weatherData.desc}</h2>
-						<h3 className='inter-reg'>{formattedDate}</h3>
+						<h3>{formattedDate}</h3>
 						</>
 					) : (
 					  <p>Loading weather data...</p>
