@@ -58,55 +58,15 @@ function AdditionalWeatherInfoPage() {
     fetchInitialData();
   }, []);
 
-  const handleSearch = async (query, setError) => {
-    try {
-      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&APPID=cbfe29932a8bb4e7f20315babd8f135b`);
-      if (response.ok) {
-        const data = await response.json();
-        const location = {
-          co: data.sys.country,
-          loc: data.name,
-          time: formatTimezoneOffset(data.timezone),
-          temp: data.main.temp,
-          desc: data.weather[0].main,
-        };
-        const newGlobalLocations = [...globalLocations, location];
-        if (newGlobalLocations.length > 3) {
-          newGlobalLocations.shift();
-        }
-        setGlobalLocations(newGlobalLocations);
-      } else {
-        setError(true);
-      }
-    } catch (error) {
-      setError(true);
-    }
-  };
-
-  const handleRemoveLastLocation = () => {
-    const newLocations = globalLocations.slice(0, globalLocations.length - 1);
-    setGlobalLocations(newLocations);
-  };
-
-  const handleError = () => {
-    setError(true);
-  };
-
-  const handleClearError = () => {
-    setError(false);
-  };
-
-  const [error, setError] = useState(false);
-
   return (
     <>
       <div className="additional-weather-info-page-container">
         <div className="section">
-          <Search onSearch={handleSearch} locations={globalLocations} setError={handleError} onClearError={handleClearError} />
+          <Search />
           <LocationCaroussel locations={yourLocations} />
         </div>
         <div>
-          <GlobalLocationPanes locations={globalLocations} onRemoveLastLocation={handleRemoveLastLocation} setLocations={setGlobalLocations} setError={handleError} />
+          <GlobalLocationPanes locations={globalLocations}/>
         </div>
       </div>
     </>
