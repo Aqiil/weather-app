@@ -54,6 +54,28 @@ function AdditionalWeatherInfoPage() {
     };
   }
 
+  // Search for a city
+  const onSearchCity = async (city) => {
+    try {
+      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=cbfe29932a8bb4e7f20315babd8f135b`);
+      if (!response.ok) {
+        throw new Error('City not found');
+      }
+      const data = await response.json();
+      const newLocation = {
+        co: data.sys.country,
+        loc: data.name,
+        time: formatTimezoneOffset(data.timezone),
+        temp: Math.round(data.main.temp),
+        desc: data.weather[0].main,
+      };
+      setGlobalLocations((prevLocations) => [newLocation, ...prevLocations.slice(0, -1)]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // Fetch initial data on component mount
   useEffect(() => {
     fetchInitialData();
   }, []);
@@ -62,7 +84,7 @@ function AdditionalWeatherInfoPage() {
     <>
       <div className="additional-weather-info-page-container">
         <div className="section">
-          <Search />
+          <Search onSearch={onSearchCity} />
           <LocationCaroussel locations={yourLocations} />
         </div>
         <div>
