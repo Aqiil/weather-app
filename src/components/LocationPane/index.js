@@ -1,28 +1,22 @@
-import broken_clouds from '../../assets/icons/weather/broken_clouds.png';
-import clear_sky from '../../assets/icons/weather/clear_sky.png';
-import few_clouds from '../../assets/icons/weather/few_clouds.png';
-import mist from '../../assets/icons/weather/mist.png';
-import rain from '../../assets/icons/weather/rain.png';
-import scattered_clouds from '../../assets/icons/weather/scattered_clouds.png';
-import shower_rain from '../../assets/icons/weather/shower_rain.png';
-import snow from '../../assets/icons/weather/snow.png';
 import thunderstorm from '../../assets/icons/weather/thunderstorm.png';
+import drizzle from '../../assets/icons/weather/shower_rain.png';
+import rain from '../../assets/icons/weather/rain.png';
+import snow from '../../assets/icons/weather/snow.png';
+import clear from '../../assets/icons/weather/clear_sky.png';
+import clouds from '../../assets/icons/weather/broken_clouds.png';
 
 import './style.css';
 import React, { useState, useEffect } from 'react';
 
 function LocationPane({ co, loc, time, temp, desc }) {
 
-  const iconMap = {
-    'clear sky': clear_sky,
-    'few clouds': few_clouds,
-    'scattered clouds': scattered_clouds,
-    'broken clouds': broken_clouds,
-    'shower rain': shower_rain,
-    'rain': rain,
-    'thunderstorm': thunderstorm,
-    'snow': snow,
-    'mist': mist
+  const iconMap = {    
+    'Thunderstorm': thunderstorm,
+    'Drizzle': drizzle,
+    'Rain': rain,
+    'Snow': snow,
+    'Clear': clear,
+    'Clouds': clouds,
   };
 
   return (
