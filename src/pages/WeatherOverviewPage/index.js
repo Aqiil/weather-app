@@ -5,6 +5,7 @@ import FiveDayForecast from '../../components/FiveDayForecast';
 function WeatherOverviewPage() {
   return (
     <>
+    {/* Change code so that Location and API key are passed in as props */}
       <div className="section">
         <MainPane />
       </div>

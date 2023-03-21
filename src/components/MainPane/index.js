@@ -30,12 +30,35 @@ function MainPane() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=cbfe29932a8bb4e7f20315babd8f135b');
+      const response = await fetch('http://api.openweathermap.org/data/2.5/forecast?q=London&units=metric&APPID=cbfe29932a8bb4e7f20315babd8f135b');
       const data = await response.json();
+
+      const currentTime = Math.floor(new Date().getTime() / 1000);
+      // Filter data for forecasts for today only
+      const today = data.list.filter(item => {
+        const itemTime = item.dt;
+        return new Date(itemTime * 1000).toDateString() === new Date(currentTime * 1000).toDateString();
+      });
+      
+      // Find the next rain forecast
+      const nextRain = data.list.find(item => item.weather[0].main === 'Rain');
+      const nextRainTime = nextRain ? new Date(nextRain.dt * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : null;
+      // Convert rain coverage to percentage or set to null if no rain forecast
+      const rainCoverage = nextRain ? Math.round(nextRain.pop * 100) : null;
+      
+      // Find the highest and lowest temperature for today
+      const tempArray = today.map(item => item.main.temp);
+      const high = Math.round(Math.max(...tempArray));
+      const low = Math.round(Math.min(...tempArray));
+
       setWeatherData({
-        desc: data.weather[0].main,
-        loc: data.name,
-        temp: Math.round(data.main.temp)
+        desc: data.list[0].weather[0].main,
+        loc: data.city.name,
+        temp: Math.round(data.list[0].main.temp),
+        nextRainTime,
+        rainCoverage,
+        high,
+        low
       });
     }
     fetchData();
@@ -65,9 +88,9 @@ function MainPane() {
 				{/* Daily forecast pane container */}
 				<hr className='main-pane-hr'/>
 				<div className="main-pane-sub-container">
-					<DailyRainfall coverage='90' time='10:30' />
-					<DailyHL high={weatherData?.temp + 5} low={weatherData?.temp - 5} />
-				</div>
+          <DailyRainfall coverage={weatherData?.rainCoverage} time={weatherData?.nextRainTime} />
+          <DailyHL high={weatherData?.high} low={weatherData?.low} />
+        </div>
 			</div>
 		</>
 	)
