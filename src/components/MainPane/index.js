@@ -15,7 +15,7 @@ import React, { useState, useEffect } from 'react';
 function MainPane() {
 	const today = new Date();
   const options = { weekday: 'long', day: 'numeric', month: 'long' };
-  const formattedDate = today.toLocaleDateString('en-US', options);
+  const formattedDate = today.toLocaleDateString('en-UK', options);
 
 	const [weatherData, setWeatherData] = useState(null);
 

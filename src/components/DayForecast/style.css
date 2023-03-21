@@ -1,0 +1,26 @@
+.day{
+    padding-top: 2em;
+    align-items: center;
+    height: 7em;
+}
+
+.weather-picture img{
+    height: 48px;
+    width: 48px;
+}
+
+.five-days div{
+    display: inline-flex;
+}
+
+.rain, .hL, .dayinside, .weather-picture{
+    margin-left: 1.2em;
+}
+  
+#firstDay .rain, #firstDay .dayinside, #firstDay .weather-picture{
+    margin-left: 0.8em;
+}
+
+#firstDay .hL{
+    margin-left: 1.5em;
+}
