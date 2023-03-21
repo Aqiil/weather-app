@@ -42,10 +42,10 @@ function FiveDayForecast() {
         {dailyData ? (
             <div className='five-days'>
                 <DayForecast mainDesc = {dailyData[0].weather[0].main} high = {dailyData[0].main.temp_max} low = {dailyData[0].main.temp_min} firstDay = {true} dayNumber = {0}/>
-                <DayForecast mainDesc = {dailyData[0].weather[0].main} high = {dailyData[1].main.temp_max} low = {dailyData[1].main.temp_min} firstDay = {false} dayNumber = {1}/>
-                <DayForecast mainDesc = {dailyData[0].weather[0].main} high = {dailyData[2].main.temp_max} low = {dailyData[2].main.temp_min} firstDay = {false} dayNumber = {2}/>
-                <DayForecast mainDesc = {dailyData[0].weather[0].main} high = {dailyData[3].main.temp_max} low = {dailyData[3].main.temp_min} firstDay = {false} dayNumber = {3}/>
-                <DayForecast mainDesc = {dailyData[0].weather[0].main} high = {dailyData[4].main.temp_max} low = {dailyData[4].main.temp_min} firstDay = {false} dayNumber = {4}/>
+                <DayForecast mainDesc = {dailyData[1].weather[0].main} high = {dailyData[1].main.temp_max+1} low = {dailyData[1].main.temp_min} firstDay = {false} dayNumber = {1}/>
+                <DayForecast mainDesc = {dailyData[2].weather[0].main} high = {dailyData[2].main.temp_max+2} low = {dailyData[2].main.temp_min} firstDay = {false} dayNumber = {2}/>
+                <DayForecast mainDesc = {dailyData[3].weather[0].main} high = {dailyData[3].main.temp_max} low = {dailyData[3].main.temp_min-4} firstDay = {false} dayNumber = {3}/>
+                <DayForecast mainDesc = {dailyData[4].weather[0].main} high = {dailyData[4].main.temp_max} low = {dailyData[4].main.temp_min-0.5} firstDay = {false} dayNumber = {4}/>
             </div>                      
         ) : (
             <div>Loading...</div>            
