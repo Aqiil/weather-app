@@ -35,13 +35,13 @@ function DayForecast({mainDesc, high, low, firstDay,dayNumber}) {
       ];
   return (
 
-    <div className='day-forecast-container' id = {firstDay ? 'firstDay' : ''}>
+    <div className='day-forecast-container' id = {firstDay ? 'firstDay' : null}>
         <div className='day'>
             <div className="dayinside" >
                 {fiveDays[dayNumber]}
             </div>
             <div className='weather-picture'>
-                <img src={iconMap[mainDesc]} className="weather-picture" alt="weather condition"/>
+                <img src={iconMap[mainDesc]} alt="weather condition"/>
             </div>
             <div className='rain'>
                 <DailyRainfall coverage='90' time='10:30' />
