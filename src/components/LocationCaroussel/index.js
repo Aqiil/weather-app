@@ -26,7 +26,7 @@ function LocationCaroussel({ locations }) {
           {locations.map((location, index) => (
             <LocationPane
               key={index}
-              co={location.co}
+              co={index === 0 ? 'Current Location' :location.co}
               loc={location.loc}
               time={location.time}
               temp={location.temp}
