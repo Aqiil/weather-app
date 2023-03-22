@@ -25,11 +25,6 @@ cd weather-app
 npm install
 ```
 
-5. Install React Slick by running the following command:
-```
-npm install react-slick
-```
-
 ## Development Workflow
 
 Once you've set up the app on your local machine, you can start a live-reload development server by running the following command:
@@ -51,17 +46,15 @@ To start a local production server and view the built app, run the following com
 npm start
 ```
 
-This will start the local server and open the app in your default browser.
-
-To run the app's test suite, run the following command:
-```
-npm test
-```
-
 This will launch the test runner in interactive watch mode, which will automatically re-run the tests whenever you make changes to the code.
 
 ## Further Information
+
+If you have errors installing the project dependancies or when running the production server, you can install React Slick manually by running the following command:
+```
+npm install react-slick
+```
 For more information about the React Slick library used in this app, you can refer to the official documentation: https://react-slick.neostack.com/
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE.txt) file for details.
