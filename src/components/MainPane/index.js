@@ -11,7 +11,7 @@ import DailyRainfall from '../DailyRainfall';
 import './style.css';
 import React, { useState, useEffect } from 'react';
 
-function MainPane() {
+function MainPane({ onClick }) {
 	const today = new Date();
   const options = { weekday: 'long', day: 'numeric', month: 'long' };
   const formattedDate = today.toLocaleDateString('en-UK', options);
@@ -69,7 +69,7 @@ function MainPane() {
 	return (
 		<>
 			{/* Main pane container */}
-			<div className="main-pane-container-wrapper">
+			<div className="main-pane-container-wrapper" onClick={onClick}>
 				<div className="main-pane-container">
 					{/* Current weather condition icon */}
 					<img src={iconMap[weatherData?.desc]} className="weather-icon" alt="weather condition" />

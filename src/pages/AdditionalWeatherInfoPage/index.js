@@ -8,7 +8,7 @@ import Search from '../../components/Search';
 import LocationCaroussel from '../../components/LocationCaroussel';
 import GlobalLocationPanes from '../../components/GlobalLocationPanes';
 
-function AdditionalWeatherInfoPage() {
+function AdditionalWeatherInfoPage({ onHomeClick }) {
   const [globalLocations, setGlobalLocations] = useState([]);
   const [yourLocations, setYourLocations] = useState([]);
 
@@ -85,10 +85,11 @@ function AdditionalWeatherInfoPage() {
       <div className="additional-weather-info-page-container">
         <div className="section">
           <Search onSearch={onSearchCity} />
+          <Home onClick={onHomeClick} />
           <LocationCaroussel locations={yourLocations} />
         </div>
         <div>
-          <GlobalLocationPanes locations={globalLocations}/>
+          <GlobalLocationPanes locations={globalLocations} />
         </div>
       </div>
     </>

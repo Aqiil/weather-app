@@ -2,12 +2,12 @@ import MainPane from '../../components/MainPane';
 import HourlyForecast from '../../components/HourlyForecast';
 import FiveDayForecast from '../../components/FiveDayForecast';
 
-function WeatherOverviewPage() {
+function WeatherOverviewPage({ onClick }) {
   return (
     <>
     {/* Change code so that Location and API key are passed in as props */}
       <div className="section">
-        <MainPane />
+        <MainPane onClick={onClick}/>
       </div>
       <div className="section">
         <HourlyForecast />
