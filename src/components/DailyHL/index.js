@@ -9,10 +9,10 @@ function DailyHL({ high, low }) {
       <img src={temp_icon} alt="Weather Icon" />
       <div className="daily-hl-temps">
         <div className="daily-hl-temp">
-          <p>H: {high}°</p>
+          <p>H: {Math.round(high*10) / 10}°</p>
         </div>
         <div className="daily-hl-temp">
-            <p>L: {low}°</p>
+            <p>L: {Math.round(low*10) / 10}°</p>
         </div>
       </div>
     </div>
