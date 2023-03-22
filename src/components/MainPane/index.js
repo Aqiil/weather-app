@@ -7,7 +7,6 @@ import clouds from '../../assets/icons/weather/broken_clouds.png';
 
 import DailyHL from '../DailyHL';
 import DailyRainfall from '../DailyRainfall';
-import HourlyForecast from '../HourlyForecast';
 
 import './style.css';
 import React, { useState, useEffect } from 'react';
