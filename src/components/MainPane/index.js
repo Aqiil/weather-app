@@ -50,6 +50,9 @@ function MainPane() {
       const tempArray = today.map(item => item.main.temp);
       const high = Math.round(Math.max(...tempArray));
       const low = Math.round(Math.min(...tempArray));
+      
+      // console.log(tempArray)
+      // console.log(high, low);
 
       setWeatherData({
         desc: data.list[0].weather[0].main,
