@@ -1,26 +1,16 @@
-.day{
-    padding-top: 2em;
-    align-items: center;
-    height: 7em;
+.day-forecast-container {
+  align-items: center;
+  display: flex;
+  height: 85px;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
-.weather-picture img{
-    height: 48px;
-    width: 48px;
+.day-forecast-container:last-child {
+  border-bottom: none;
 }
 
-.five-days div{
-    display: inline-flex;
-}
-
-.rain, .hL, .dayinside, .weather-picture{
-    margin-left: 1.2em;
-}
-  
-#firstDay .rain, #firstDay .dayinside, #firstDay .weather-picture{
-    margin-left: 0.8em;
-}
-
-#firstDay .hL{
-    margin-left: 1.5em;
+.day-forecast-container img {
+  max-height: 40px;
+  object-fit: contain;
 }

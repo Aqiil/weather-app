@@ -10,7 +10,7 @@ function HourlyForecast() {
     const fetchHourlyData = async () => {
       const response = await fetch('http://api.openweathermap.org/data/2.5/forecast?q=London&units=metric&APPID=cbfe29932a8bb4e7f20315babd8f135b');
       const data = await response.json();
-      setHourlyData(data.list.slice(0, 5)); // Get the first 5 hours of data
+      setHourlyData(data.list.slice(0, 5));
     };
     fetchHourlyData();
   }, []);
@@ -28,13 +28,8 @@ function HourlyForecast() {
         </div>
         <hr />
         <div className="five-hour-forecast-container">
-          {hourlyData &&
-            hourlyData.map((hourData, index) => (
-              <HourForecast
-                key={index}
-                hour={index === 0 ? 'Now' : formatHour(hourData.dt)}
-                desc={hourData.weather[0].main.toLowerCase()}
-                temp={Math.round(hourData.main.temp)}
+          {hourlyData && hourlyData.map((hourData, index) => (
+              <HourForecast key={index} hour={index === 0 ? 'Now' : formatHour(hourData.dt)} desc={hourData.weather[0].main.toLowerCase()} temp={Math.round(hourData.main.temp)}
               />
             ))}
         </div>
