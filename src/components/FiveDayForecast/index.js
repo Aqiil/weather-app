@@ -2,13 +2,14 @@ import './style.css';
 import React, { useState, useEffect } from 'react';
 
 import DayForecast from '../DayForecast';
+import config from '../../config.js';
 
 function FiveDayForecast() {
   const [dailyData, setDailyData] = useState(null);
 
   useEffect(() => {
     const fetchDailyData = async () => {
-      const response = await fetch('http://api.openweathermap.org/data/2.5/forecast?q=London&units=metric&APPID=cbfe29932a8bb4e7f20315babd8f135b');
+      const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${config.DEFAULT_COUNTRY}&units=metric&APPID=${config.API_KEY}`);
       const data = await response.json();
       setDailyData(data.list.filter((_, index) => index % 8 === 0).slice(0, 6));
     };

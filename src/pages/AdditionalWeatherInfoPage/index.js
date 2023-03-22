@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { formatTimezoneOffset } from '../../utils/utils';
 
 import style from './style.css';
+import config from '../../config.js';
 
 import Home from '../../components/Home';
 import Search from '../../components/Search';
@@ -16,9 +17,9 @@ function AdditionalWeatherInfoPage({ onHomeClick }) {
     // Data for LocationCaroussel component
     try {
       const yourLocationsData = await Promise.all([
-        fetch('https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=cbfe29932a8bb4e7f20315babd8f135b'),
-        fetch('https://api.openweathermap.org/data/2.5/weather?q=Brunei&units=metric&APPID=cbfe29932a8bb4e7f20315babd8f135b'),
-        fetch('https://api.openweathermap.org/data/2.5/weather?q=Karlsruhe&units=metric&APPID=cbfe29932a8bb4e7f20315babd8f135b')
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${config.DEFAULT_COUNTRY}&units=metric&APPID=${config.API_KEY}`),
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=Brunei&units=metric&APPID=${config.API_KEY}`),
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=Karlsruhe&units=metric&APPID=${config.API_KEY}`)
       ]);
       const yourLocationsJson = await Promise.all(yourLocationsData.map(response => response.json()));
       const newYourLocations = yourLocationsJson.map((data) => ({
@@ -36,9 +37,9 @@ function AdditionalWeatherInfoPage({ onHomeClick }) {
     // Data for GlobalLocationPanes component
     try {
       const globalLocationsData = await Promise.all([
-        fetch('https://api.openweathermap.org/data/2.5/weather?q=Nairobi&units=metric&APPID=cbfe29932a8bb4e7f20315babd8f135b'),
-        fetch('https://api.openweathermap.org/data/2.5/weather?q=Tokyo&units=metric&APPID=cbfe29932a8bb4e7f20315babd8f135b'),
-        fetch('https://api.openweathermap.org/data/2.5/weather?q=New%20York&units=metric&APPID=cbfe29932a8bb4e7f20315babd8f135b')
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=Nairobi&units=metric&APPID=${config.API_KEY}`),
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=Tokyo&units=metric&APPID=${config.API_KEY}`),
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=New%20York&units=metric&APPID=${config.API_KEY}`)
       ]);
       const globalLocationsJson = await Promise.all(globalLocationsData.map(response => response.json()));
       const newGlobalLocations = globalLocationsJson.map((data) => ({
@@ -57,7 +58,7 @@ function AdditionalWeatherInfoPage({ onHomeClick }) {
   // Search for a city
   const onSearchCity = async (city) => {
     try {
-      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=cbfe29932a8bb4e7f20315babd8f135b`);
+      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${config.API_KEY}`);
       if (!response.ok) {
         throw new Error('City not found');
       }

@@ -25,3 +25,7 @@
 .slick-dots li button:before {
   color: transparent !important; /* hide default dots */
 }
+
+.carousel-container {
+  cursor: pointer;
+}

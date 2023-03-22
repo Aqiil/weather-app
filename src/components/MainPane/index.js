@@ -9,6 +9,7 @@ import DailyHL from '../DailyHL';
 import DailyRainfall from '../DailyRainfall';
 
 import './style.css';
+import config from '../../config';
 import React, { useState, useEffect } from 'react';
 
 function MainPane({ onClick }) {
@@ -29,7 +30,7 @@ function MainPane({ onClick }) {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('http://api.openweathermap.org/data/2.5/forecast?q=London&units=metric&APPID=cbfe29932a8bb4e7f20315babd8f135b');
+      const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${config.DEFAULT_COUNTRY}&units=metric&APPID=${config.API_KEY}`);
       const data = await response.json();
 
       const currentTime = Math.floor(new Date().getTime() / 1000);

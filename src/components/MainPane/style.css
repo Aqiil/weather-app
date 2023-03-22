@@ -1,6 +1,7 @@
 .main-pane-container-wrapper {
   background-color: #133C55;
   border-radius: 0 0 50px 50px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   height: 40.25rem; /* 688px */
