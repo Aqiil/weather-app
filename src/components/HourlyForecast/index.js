@@ -9,9 +9,9 @@ function HourlyForecast() {
 
   useEffect(() => {
     const fetchHourlyData = async () => {
-      const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${config.DEFAULT_COUNTRY}&units=metric&APPID=${config.API_KEY}`);
+      const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${config.DEFAULT_LATITUDE}&lon=${config.DEFAULT_LONGITUDE}&exclude=current,minutely,daily,alerts&units=metric&appid=${config.API_KEY}`);
       const data = await response.json();
-      setHourlyData(data.list.slice(0, 5));
+      setHourlyData(data.hourly.slice(0, 6));
     };
     fetchHourlyData();
   }, []);
@@ -30,7 +30,7 @@ function HourlyForecast() {
         <hr />
         <div className="five-hour-forecast-container">
           {hourlyData && hourlyData.map((hourData, index) => (
-              <HourForecast key={index} hour={index === 0 ? 'Now' : formatHour(hourData.dt)} desc={hourData.weather[0].main.toLowerCase()} temp={Math.round(hourData.main.temp)}
+              <HourForecast key={index} hour={index === 0 ? 'Now' : formatHour(hourData.dt)} desc={hourData.weather[0].main.toLowerCase()} temp={Math.round(hourData.temp)}
               />
             ))}
         </div>
