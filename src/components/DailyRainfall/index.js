@@ -9,12 +9,20 @@ function DailyRainfall({ coverage, time }) {
     <div className="daily-rainfall-container">
       <img src={rainfall_icon} alt="Weather Icon" />
       <div className="daily-rainfall">
-        <div className="daily-rainfall">
-          <p>{coverage}%</p>
-        </div>
-        <div className="daily-rainfall">
-            <p>{time}</p>
-        </div>
+        {coverage !== null && time !== null ? (
+          <>
+            <div className="daily-rainfall">
+              <p>{coverage}%</p>
+            </div>
+            <div className="daily-rainfall">
+              <p>{time}</p>
+            </div>
+          </>
+        ) : (
+          <div className="daily-rainfall">
+            <p>&lt;1%</p>
+          </div>
+        )}
       </div>
     </div>
   );
