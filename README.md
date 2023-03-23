@@ -24,6 +24,11 @@ cd weather-app
 ```
 npm install
 ```
+5. Configure config.js with your own student or developer API key
+```
+// src/config.js
+API_KEY: {YOUR_API-KEY}
+```
 
 ## Development Workflow
 
