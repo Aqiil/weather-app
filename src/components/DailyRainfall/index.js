@@ -1,4 +1,3 @@
-import temp_icon from '../../assets/icons/weather/temp_icon.png';
 import rainfall_icon from '../../assets/icons/weather/rainfall_icon.png';
 
 import './style.css';

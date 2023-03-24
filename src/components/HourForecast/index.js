@@ -6,7 +6,6 @@ import thunderstorm from '../../assets/icons/forecast/thunderstorm.png';
 import wind from '../../assets/icons/forecast/wind.png';
 
 import './style.css';
-import React, { useState, useEffect } from 'react';
 
 function HourForecast({ hour, desc, temp }) {
 

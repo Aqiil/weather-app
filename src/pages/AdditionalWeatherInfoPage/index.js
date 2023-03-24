@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { formatTimezoneOffset } from '../../utils/utils';
 
-import style from './style.css';
+import './style.css';
 import config from '../../config.js';
 
 import Home from '../../components/Home';

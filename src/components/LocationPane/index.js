@@ -6,7 +6,6 @@ import clear from '../../assets/icons/weather/clear_sky.png';
 import clouds from '../../assets/icons/weather/broken_clouds.png';
 
 import './style.css';
-import React, { useState, useEffect } from 'react';
 
 function LocationPane({ co, loc, time, temp, desc }) {
 
