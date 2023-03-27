@@ -1,6 +1,9 @@
 # weather-app
 This is a simple React weather app built as part of the ECS522U GUI Programming module. It allows users to search for the weather in a given location or across the world and displays the current temperature, weather conditions, and weather forecast for the near future.
 
+<img src="https://user-images.githubusercontent.com/74040264/228068717-0ee78767-7306-4027-865d-62495e6975f1.png" width="30%"> <img src="https://user-images.githubusercontent.com/74040264/228068878-a86b2781-3c64-43e9-9c25-4bbd8273853a.png" width="30%"> <img src="https://user-images.githubusercontent.com/74040264/228069142-83c10579-0c90-4a4d-8582-569eb658ab9e.png" width="30%">
+
+
 ## Set-Up Guide
 ### Cloning the repository
 To set up the app on your local machine, follow the instructions below:
